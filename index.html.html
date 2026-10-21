@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Traffic Sniffer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sezione Informazioni Autore -->
+        <header class="header-info">
+            <h1>Network Traffic Sniffer</h1>
+            <div class="author-details">
+                <p><strong>Studente:</strong> Mario Rossi</p>
+                <p><strong>Matricola:</strong> 123456</p>
+                <p><strong>Email:</strong> m.rossi@studente.it</p>
+            </div>
+        </header>
+
+        <!-- Modulo di Configurazione della Rete -->
+        <main class="sniffer-panel">
+            <section class="config-form">
+                <h2>Configurazione Sniffer</h2>
+                <form id="networkForm">
+                    <div class="form-group">
+                        <label for="ipAddress">Indirizzo IP Target:</label>
+                        <input type="text" id="ipAddress" placeholder="es. 192.168.1.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="packetType">Tipo di Pacchetto:</label>
+                        <select id="packetType">
+                            <option value="TCP">TCP</option>
+                            <option value="UDP">UDP</option>
+                            <option value="ICMP">ICMP</option>
+                            <option value="HTTP">HTTP</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="btnStart">Avvia Scansione</button>
+                </form>
+            </section>
+
+            <!-- Console dei Log e Risultati -->
+            <section class="results-panel">
+                <h2>Log Traffico di Rete</h2>
+                <div id="logConsole" class="console">
+                    <p class="system-msg">[Sistema] Pronto per la scansione. Inserisci i dati e clicca Avvia.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
