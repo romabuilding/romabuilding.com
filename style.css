@@ -1,0 +1,129 @@
+/* Stili Generali e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Intestazione Autore */
+.header-info {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 5px solid #38bdf8;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.header-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.author-details p {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 4px;
+}
+
+/* Pannello Principale */
+.sniffer-panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .sniffer-panel {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.config-form, .results-panel {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #475569;
+    background-color: #334155;
+    color: #fff;
+    font-size: 14px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #0369a1;
+}
+
+/* Console dei Log */
+.console {
+    background-color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 15px;
+    border-radius: 4px;
+    height: 250px;
+    overflow-y: auto;
+    font-size: 13px;
+    border: 1px solid #334155;
+}
+
+.console p {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.system-msg { color: #a855f7; }
+.log-msg { color: #22c55e; }
